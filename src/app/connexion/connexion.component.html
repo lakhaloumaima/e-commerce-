@@ -1,0 +1,16 @@
+<div class="container">
+<h1> Connexion</h1>
+<div>
+    <label>Login</label> <br><input placeholder="Login" #nom><br>
+    <label>Mot de passe</label> <br><input placeholder="password" #desc type="password"><br><br>
+    <button 
+    (click)="seConnecter(nom.value,desc.value)" routerLink="['/admin']" class="btn btn-outline-secondary">Se connecter</button><br> <br>
+
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+<footer class="footer">
+    <div class="contenu">
+        <a  [routerLink]="['']" > retour au d'acceuil</a>
+    </div>
+</footer>

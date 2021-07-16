@@ -1,0 +1,15 @@
+<div class="container">
+    <h2> ajout du materiel :</h2>
+    <label>Nom du materiel</label> <br><input  #nom><br>
+        <label>image du materiel : </label><br>
+        <input type="text"  #image ><br>
+    <label>prix du materiel</label> <br><input #prix><br><br>
+    <button class="btn btn-outline-secondary"
+    (click)="ajouterMateriel(nom.value,image.value,prix.value)">Ajouter</button><br>
+</div>
+<br><br><br><br>
+<footer class="footer">
+    <div class="container">
+        <a  [routerLink]="['/admin']" > retour au page admin</a>
+    </div>
+</footer>

@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>acheter d'un materiel</h1>
+    <form  (ngSubmit)="soumettre(f)" #f="ngForm">
+        <label for="nom" > Nom du materiel</label><br>
+        <input readonly size="35" type="text" id="nom" name="nom" [(ngModel)]="nom" required>
+        <!--<br>Test: {{test.className}}
+        <br><br>-->
+        <br>
+           <label> quantité :  </label><br>
+           <input type="number"> <br>
+        
+        <label for="prix" > prix du materiel </label><br>
+        <input readonly id="prix" name="prix"  [(ngModel)]="prix"><br><br>
+           
+        <button type="Submit"  class="btn btn-outline-secondary">envoyer</button><br>
+        <a  [routerLink]="['/admin']" > retour au page d'acceuil</a>
+    </form>
+</div>
+<br><br><br><br><br><br><br>
+<footer class="footer">
+    <div class="contenu">
+        <a  [routerLink]="['']" > retour au d'acceuil</a>
+    </div>
+</footer>
+
+<!--<form class="contenu" (ngSubmit)="soumettre(f)" #f="ngForm"></form>
+<table class="table table-bordered">
+    <th>nom du materiel</th><th>prix</th><th>image</th>
+<tr>
+<td>{{f.nom}}</td>
+<td>{{f.prix}} TND</td>
+<td><img [src]='f.image'></td>
+</tr>
+</table>
+<button> passer la commande</button>-->
+
+<!--<div class="container"> 
+    <h1> formulaire :</h1>
+    <label> nom :</label><br>
+    <input  type="text"><br>
+    <label> prenom :</label> <br>
+    <input type="text" ><br>
+    <label>paiement par :</label><br>
+    <select>
+        <option value="0">effectuer un choix</option>
+        <option value="1">carte bancaire</option>
+        <option value="2">carte edinar</option>
+    </select><br><br>
+    <button (click)="acheter()" class="btn btn-outline-secondary">acheter</button><br>
+    <a  [routerLink]="['']" > retour au acceuil</a>
+</div>-->

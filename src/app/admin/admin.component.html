@@ -1,0 +1,28 @@
+<br>
+<div class="container">
+<table class="table table-bordered">
+    <tr><th>id</th><th>materiel</th> <th>prix</th><th> image </th><th>modifier</th><th>supprimer</th></tr>
+    <tbody *ngFor="let f of tabm">
+        <tr>
+            <td>{{f.id}}</td>
+            <td>{{f.nom}}</td>
+            <td>{{f.prix}} TND</td>
+            <td><img [src]='f.image'></td>
+            <td><button [routerLink]="['/admin/edit',f.id]"  class="btn btn-danger"  >modifier </button> </td>
+            <td><button routerLink="/supprimer" class="btn btn-danger" (click)="supprimermateriel(f)" >supprimer </button></td>
+        </tr>
+    </tbody>
+</table> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <button class="btn btn-danger" routerLink="/ajouter" >ajouter</button>
+       <!-- <a  routerLink="/modifier" >modifier</a> -->
+   
+<br>
+</div>
+<br><br>
+<footer class="footer">
+    <div class="contenu">
+        <a  [routerLink]="['']" > retour au d'acceuil</a>
+    </div>
+</footer>

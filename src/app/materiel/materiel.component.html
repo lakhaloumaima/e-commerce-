@@ -1,0 +1,22 @@
+<!--<div style="display: flex; justify-content: space-around;">
+    <div *ngFor="let f of tabm">
+        <h4> {{f.nom}} </h4><br>
+        <img [src]='f.imageFilm'><br>
+        <p> prix : {{ f.prix }} TND </p>
+    </div>
+</div> -->
+<br>
+<div class="container">
+    <marquee><h1>bienvenue</h1></marquee>
+<table class="table table-bordered">
+    <tr><th>materiel</th> <th>prix</th><th> image </th><th>acheter</th></tr>
+    <tbody *ngFor="let f of tabm">
+        <tr>
+            <td>{{f.nom}}</td>
+            <td>{{f.prix}} TND</td>
+            <td><img [src]='f.image'></td>
+            <td> <a [routerLink]="['edit',f.id]" class="btn btn-outline-secondary" >acheter</a> </td>
+        </tr>
+        </tbody>
+        </table>
+</div>

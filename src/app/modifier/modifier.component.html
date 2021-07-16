@@ -1,0 +1,27 @@
+<div class="container">
+<h1>Modification d'un materiel</h1>
+<form  (ngSubmit)="soumettre(f)" #f="ngForm">
+    <label for="nom" > Nom du materiel</label><br>
+    <input size="35" type="text" id="nom" name="nom" [(ngModel)]="nom" required>
+    <!--<br>Test: {{test.className}}
+    <br><br>-->
+    <br>
+    <div [hidden]="nom" class="alert alert-danger">
+     Nom du materiel est obligatoire
+    </div>
+    <label for="image" > image du materiel </label><br>
+    <input id="image" name="image"  [(ngModel)]="image"><br>
+    
+    <label for="prix" > prix du materiel </label><br>
+    <input id="prix" name="prix"  [(ngModel)]="prix"><br><br>
+       
+    <button type="Submit" class="btn btn-outline-secondary">Modifier</button><br>
+    
+</form>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<footer class="footer">
+    <div class="contenu">
+        <a  [routerLink]="['/admin']" > retour au page admin</a>
+    </div>
+</footer>
